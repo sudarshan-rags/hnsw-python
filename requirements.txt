@@ -1,0 +1,4 @@
+h5py==3.1.0
+numpy==1.19.5
+pandas==1.1.5
+progressbar33==2.4
