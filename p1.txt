@@ -1,0 +1,221 @@
+ perf stat python test_print.py
+Hello World
+
+ Performance counter stats for 'python test_print.py':
+
+              9.40 msec task-clock                #    0.978 CPUs utilized          
+                 0      context-switches          #    0.000 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+               860      page-faults               #    0.091 M/sec                  
+        40,145,378      cycles                    #    4.270 GHz                    
+        51,060,164      instructions              #    1.27  insn per cycle         
+        10,906,681      branches                  # 1160.198 M/sec                  
+           391,682      branch-misses             #    3.59% of all branches        
+
+       0.009614714 seconds time elapsed
+
+       0.009633000 seconds user
+       0.000000000 seconds sys
+       
+       
+perf stat python train_cosine.py
+Progress: 100% |###########################| Elapsed Time: 0:25:27 Time: 0:25:27
+
+ Performance counter stats for 'python train_cosine.py':
+
+      1,547,491.57 msec task-clock                #    1.001 CPUs utilized          
+            10,302      context-switches          #    0.007 K/sec                  
+                27      cpu-migrations            #    0.000 K/sec                  
+         3,510,069      page-faults               #    0.002 M/sec                  
+ 6,840,311,535,403      cycles                    #    4.420 GHz                    
+12,668,839,154,714      instructions              #    1.85  insn per cycle         
+ 2,753,447,760,979      branches                  # 1779.297 M/sec                  
+    17,153,997,350      branch-misses             #    0.62% of all branches        
+
+    1546.483300905 seconds time elapsed
+
+    1539.701372000 seconds user
+       7.763395000 seconds sys
+
+
+perf stat python train_l2.py
+Progress: 100% |###########################| Elapsed Time: 0:17:44 Time: 0:17:44
+
+ Performance counter stats for 'python train_l2.py':
+
+      1,083,738.64 msec task-clock                #    1.001 CPUs utilized          
+             7,581      context-switches          #    0.007 K/sec                  
+                24      cpu-migrations            #    0.000 K/sec                  
+         2,054,510      page-faults               #    0.002 M/sec                  
+ 4,813,863,177,248      cycles                    #    4.442 GHz                    
+ 8,499,186,092,205      instructions              #    1.77  insn per cycle         
+ 1,860,180,854,976      branches                  # 1716.448 M/sec                  
+    14,393,650,008      branch-misses             #    0.77% of all branches        
+
+    1082.703377752 seconds time elapsed
+
+
+perf stat python test_cosine.py
+11
+0
+'variance: 0.006736'
+'mean: 0.810909'
+1
+'variance: 0.015156'
+'mean: 0.847611'
+2
+'variance: 0.009018'
+'mean: 0.836711'
+3
+'variance: 0.007737'
+'mean: 0.819235'
+4
+'variance: 0.006408'
+'mean: 0.807770'
+5
+'variance: 0.006576'
+'mean: 0.810048'
+6
+'variance: 0.006454'
+'mean: 0.808869'
+7
+'variance: 0.006619'
+'mean: 0.809340'
+8
+'variance: 0.006492'
+'mean: 0.807831'
+9
+'variance: 0.006648'
+'mean: 0.808900'
+10
+'variance: 0.006369'
+'mean: 0.806971'
+11
+'variance: 0.006703'
+'mean: 0.809490'
+12
+'variance: 0.006433'
+'mean: 0.808346'
+13
+'variance: 0.006630'
+'mean: 0.808753'
+14
+'variance: 0.006379'
+'mean: 0.807990'
+15
+'variance: 0.006581'
+'mean: 0.809544'
+16
+'variance: 0.006381'
+'mean: 0.807332'
+17
+'variance: 0.006560'
+'mean: 0.808137'
+18
+'variance: 0.006781'
+'mean: 0.810782'
+19
+'variance: 0.006814'
+'mean: 0.809744'
+
+ Performance counter stats for 'python test_cosine.py':
+
+        180,712.34 msec task-clock                #    1.006 CPUs utilized          
+               936      context-switches          #    0.005 K/sec                  
+                 4      cpu-migrations            #    0.000 K/sec                  
+           684,908      page-faults               #    0.004 M/sec                  
+   800,732,444,219      cycles                    #    4.431 GHz                    
+ 1,525,327,550,851      instructions              #    1.90  insn per cycle         
+   327,361,638,569      branches                  # 1811.507 M/sec                  
+     1,787,900,438      branch-misses             #    0.55% of all branches        
+
+     179.560395464 seconds time elapsed
+
+     179.431902000 seconds user
+       1.280105000 seconds sys
+
+
+
+perf stat python test_l2.py
+9
+0
+'variance: 0.007536'
+'mean: 0.510297'
+1
+'variance: 0.007038'
+'mean: 0.508616'
+2
+'variance: 0.007424'
+'mean: 0.509102'
+3
+'variance: 0.007253'
+'mean: 0.510435'
+4
+'variance: 0.007071'
+'mean: 0.509645'
+5
+'variance: 0.007171'
+'mean: 0.507589'
+6
+'variance: 0.007325'
+'mean: 0.506447'
+7
+'variance: 0.006990'
+'mean: 0.506634'
+8
+'variance: 0.006929'
+'mean: 0.507383'
+9
+'variance: 0.006876'
+'mean: 0.506923'
+10
+'variance: 0.007047'
+'mean: 0.506656'
+11
+'variance: 0.006950'
+'mean: 0.506387'
+12
+'variance: 0.006936'
+'mean: 0.506739'
+13
+'variance: 0.007018'
+'mean: 0.506787'
+14
+'variance: 0.007004'
+'mean: 0.507026'
+15
+'variance: 0.006893'
+'mean: 0.506137'
+16
+'variance: 0.006911'
+'mean: 0.505986'
+17
+'variance: 0.006839'
+'mean: 0.506683'
+18
+'variance: 0.006848'
+'mean: 0.504862'
+19
+'variance: 0.006858'
+'mean: 0.506013'
+
+ Performance counter stats for 'python test_l2.py':
+
+        120,243.43 msec task-clock                #    1.010 CPUs utilized          
+               580      context-switches          #    0.005 K/sec                  
+                 3      cpu-migrations            #    0.000 K/sec                  
+           655,560      page-faults               #    0.005 M/sec                  
+   534,020,907,638      cycles                    #    4.441 GHz                    
+   916,666,559,715      instructions              #    1.72  insn per cycle         
+   197,496,239,641      branches                  # 1642.470 M/sec                  
+     1,397,548,874      branch-misses             #    0.71% of all branches        
+
+     119.103318948 seconds time elapsed
+
+     119.012315000 seconds user
+       1.232157000 seconds sys
+
+
+    1079.091820000 seconds user
+       4.615497000 seconds sys
+
