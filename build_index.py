@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
 	num_elements = train.shape[0]
 
-	p.init_index(max_elements=num_elements, ef_construction=100, M=16)
+	p.init_index(max_elements=num_elements, ef_construction=300, M=16)
 
 	p.set_ef(10)
 

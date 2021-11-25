@@ -1,0 +1,463 @@
+ #### test search length = test data size, k = 10
+ 
+ 
+ Performance counter stats for 'python sample_read.py':
+
+          1,277.41 msec task-clock                #    5.398 CPUs utilized          
+            64,840      context-switches          #    0.051 M/sec                  
+                 4      cpu-migrations            #    0.003 K/sec                  
+            16,488      page-faults               #    0.013 M/sec                  
+     4,667,657,518      cycles                    #    3.654 GHz                    
+     2,157,934,967      instructions              #    0.46  insn per cycle         
+       437,305,135      branches                  #  342.338 M/sec                  
+         9,928,557      branch-misses             #    2.27% of all branches        
+
+       0.236648788 seconds time elapsed
+
+       0.639969000 seconds user
+       0.638854000 seconds sys
+
+
+
+########## num_elements = train_data length, ef_construction = 100, M = 16
+
+Saving index to 'train_index.bin'
+
+ Performance counter stats for 'python build_index.py':
+
+        180,795.38 msec task-clock                #    3.992 CPUs utilized          
+            19,810      context-switches          #    0.110 K/sec                  
+                15      cpu-migrations            #    0.000 K/sec                  
+           125,835      page-faults               #    0.696 K/sec                  
+   731,029,611,246      cycles                    #    4.043 GHz                    
+   520,820,814,030      instructions              #    0.71  insn per cycle         
+    64,899,571,525      branches                  #  358.967 M/sec                  
+     4,182,931,902      branch-misses             #    6.45% of all branches        
+
+      45.294690837 seconds time elapsed
+
+     179.520099000 seconds user
+       1.285635000 seconds sys
+
+
+
+ Performance counter stats for 'python sample_load.py':
+
+          2,610.88 msec task-clock                #    1.743 CPUs utilized          
+            15,020      context-switches          #    0.006 M/sec                  
+                 4      cpu-migrations            #    0.002 K/sec                  
+           118,549      page-faults               #    0.045 M/sec                  
+    10,397,159,496      cycles                    #    3.982 GHz                    
+     5,118,652,798      instructions              #    0.49  insn per cycle         
+     1,045,507,599      branches                  #  400.442 M/sec                  
+        15,569,504      branch-misses             #    1.49% of all branches        
+
+       1.498202132 seconds time elapsed
+
+       1.825937000 seconds user
+       0.786589000 seconds sys
+
+l2
+
+ Performance counter stats for 'python search_index.py':
+
+          3,243.58 msec task-clock                #    2.054 CPUs utilized          
+             1,237      context-switches          #    0.381 K/sec                  
+                15      cpu-migrations            #    0.005 K/sec                  
+           125,935      page-faults               #    0.039 M/sec                  
+    12,789,746,936      cycles                    #    3.943 GHz                    
+     5,768,031,629      instructions              #    0.45  insn per cycle         
+     1,123,495,135      branches                  #  346.375 M/sec                  
+        18,527,544      branch-misses             #    1.65% of all branches        
+
+       1.578959610 seconds time elapsed
+
+       2.172516000 seconds user
+       1.075613000 seconds sys
+
+cosine
+
+ Performance counter stats for 'python search_index.py':
+
+          2,936.31 msec task-clock                #    1.930 CPUs utilized          
+            36,806      context-switches          #    0.013 M/sec                  
+                 7      cpu-migrations            #    0.002 K/sec                  
+           125,947      page-faults               #    0.043 M/sec                  
+    11,543,277,937      cycles                    #    3.931 GHz                    
+     5,566,487,203      instructions              #    0.48  insn per cycle         
+     1,105,606,014      branches                  #  376.529 M/sec                  
+        18,220,104      branch-misses             #    1.65% of all branches        
+
+       1.521361299 seconds time elapsed
+
+       1.836678000 seconds user
+       1.106155000 seconds sys
+
+
+
+########## num_elements = train_data length, ef_construction = 100, M = 32
+
+
+Saving index to 'train_index.bin'
+
+ Performance counter stats for 'python build_index.py':
+
+        208,767.75 msec task-clock                #    3.988 CPUs utilized          
+             6,475      context-switches          #    0.031 K/sec                  
+                25      cpu-migrations            #    0.000 K/sec                  
+           163,013      page-faults               #    0.781 K/sec                  
+   842,598,249,529      cycles                    #    4.036 GHz                    
+   565,857,102,428      instructions              #    0.67  insn per cycle         
+    69,548,505,806      branches                  #  333.138 M/sec                  
+     4,400,978,449      branch-misses             #    6.33% of all branches        
+
+      52.355288738 seconds time elapsed
+
+     207.504085000 seconds user
+       1.280042000 seconds sys
+
+
+
+l2
+
+ Performance counter stats for 'python search_index.py':
+
+          3,475.90 msec task-clock                #    2.136 CPUs utilized          
+               406      context-switches          #    0.117 K/sec                  
+                12      cpu-migrations            #    0.003 K/sec                  
+           162,687      page-faults               #    0.047 M/sec                  
+    13,564,812,930      cycles                    #    3.903 GHz                    
+     5,955,920,859      instructions              #    0.44  insn per cycle         
+     1,137,461,149      branches                  #  327.242 M/sec                  
+        18,182,297      branch-misses             #    1.60% of all branches        
+
+       1.627216446 seconds time elapsed
+
+       2.343432000 seconds user
+       1.135054000 seconds sys
+
+
+cosine
+
+ Performance counter stats for 'python search_index.py':
+
+          3,077.27 msec task-clock                #    1.937 CPUs utilized          
+               406      context-switches          #    0.132 K/sec                  
+                 5      cpu-migrations            #    0.002 K/sec                  
+           162,742      page-faults               #    0.053 M/sec                  
+    11,994,146,790      cycles                    #    3.898 GHz                    
+     5,648,089,758      instructions              #    0.47  insn per cycle         
+     1,111,751,582      branches                  #  361.279 M/sec                  
+        17,987,564      branch-misses             #    1.62% of all branches        
+
+       1.589009891 seconds time elapsed
+
+       1.956585000 seconds user
+       1.128307000 seconds sys
+
+
+
+########## num_elements = train_data length, ef_construction = 100, M = 64
+
+
+Saving index to 'train_index.bin'
+
+ Performance counter stats for 'python build_index.py':
+
+        219,253.91 msec task-clock                #    3.951 CPUs utilized          
+            30,471      context-switches          #    0.139 K/sec                  
+                17      cpu-migrations            #    0.000 K/sec                  
+           239,251      page-faults               #    0.001 M/sec                  
+   893,688,074,815      cycles                    #    4.076 GHz                    
+   585,461,476,964      instructions              #    0.66  insn per cycle         
+    71,725,372,675      branches                  #  327.134 M/sec                  
+     4,502,276,621      branch-misses             #    6.28% of all branches        
+
+      55.490222378 seconds time elapsed
+
+     217.337787000 seconds user
+       1.933870000 seconds sys
+
+
+
+l2
+
+ Performance counter stats for 'python search_index.py':
+
+          3,573.30 msec task-clock                #    2.167 CPUs utilized          
+               620      context-switches          #    0.174 K/sec                  
+                 7      cpu-migrations            #    0.002 K/sec                  
+           236,569      page-faults               #    0.066 M/sec                  
+    14,005,442,125      cycles                    #    3.919 GHz                    
+     6,123,882,953      instructions              #    0.44  insn per cycle         
+     1,164,832,759      branches                  #  325.982 M/sec                  
+        18,074,553      branch-misses             #    1.55% of all branches        
+
+       1.649314821 seconds time elapsed
+
+       2.346003000 seconds user
+       1.236467000 seconds sys
+
+
+
+cosine
+
+ Performance counter stats for 'python search_index.py':
+
+          3,183.61 msec task-clock                #    1.909 CPUs utilized          
+               523      context-switches          #    0.164 K/sec                  
+                18      cpu-migrations            #    0.006 K/sec                  
+           236,582      page-faults               #    0.074 M/sec                  
+    12,431,322,269      cycles                    #    3.905 GHz                    
+     5,932,534,683      instructions              #    0.48  insn per cycle         
+     1,154,071,744      branches                  #  362.504 M/sec                  
+        18,125,453      branch-misses             #    1.57% of all branches        
+
+       1.667434556 seconds time elapsed
+
+       1.963315000 seconds user
+       1.224904000 seconds sys
+
+
+
+########## num_elements = train_data length, ef_construction = 100, M = 128
+
+ Performance counter stats for 'python build_index.py':
+
+        296,663.65 msec task-clock                #    3.975 CPUs utilized          
+            53,411      context-switches          #    0.180 K/sec                  
+                 9      cpu-migrations            #    0.000 K/sec                  
+           388,885      page-faults               #    0.001 M/sec                  
+ 1,196,635,600,928      cycles                    #    4.034 GHz                    
+   765,180,993,864      instructions              #    0.64  insn per cycle         
+    93,454,927,060      branches                  #  315.020 M/sec                  
+     5,970,338,600      branch-misses             #    6.39% of all branches        
+
+      74.639860490 seconds time elapsed
+
+     294.367658000 seconds user
+       2.309086000 seconds sys
+
+
+
+l2
+
+
+          3,834.22 msec task-clock                #    2.070 CPUs utilized          
+               646      context-switches          #    0.168 K/sec                  
+                10      cpu-migrations            #    0.003 K/sec                  
+           384,971      page-faults               #    0.100 M/sec                  
+    15,093,279,738      cycles                    #    3.936 GHz                    
+     6,869,960,005      instructions              #    0.46  insn per cycle         
+     1,281,141,675      branches                  #  334.133 M/sec                  
+        18,534,641      branch-misses             #    1.45% of all branches        
+
+       1.852477105 seconds time elapsed
+
+       2.373767000 seconds user
+       1.462268000 seconds sys
+
+
+
+cosine
+
+ Performance counter stats for 'python search_index.py':
+
+          3,333.90 msec task-clock                #    1.836 CPUs utilized          
+               328      context-switches          #    0.098 K/sec                  
+                 6      cpu-migrations            #    0.002 K/sec                  
+           384,488      page-faults               #    0.115 M/sec                  
+    12,981,181,166      cycles                    #    3.894 GHz                    
+     6,709,528,614      instructions              #    0.52  insn per cycle         
+     1,275,777,370      branches                  #  382.668 M/sec                  
+        18,218,501      branch-misses             #    1.43% of all branches        
+
+       1.815938098 seconds time elapsed
+
+       2.015966000 seconds user
+       1.323241000 seconds sys
+       
+       
+########## num_elements = train_data length, ef_construction = 150, M = 16       
+
+Saving index to 'train_index.bin'
+
+ Performance counter stats for 'python build_index.py':
+
+        263,973.63 msec task-clock                #    3.994 CPUs utilized          
+             4,028      context-switches          #    0.015 K/sec                  
+                19      cpu-migrations            #    0.000 K/sec                  
+           124,829      page-faults               #    0.473 K/sec                  
+ 1,057,705,420,241      cycles                    #    4.007 GHz                    
+   754,660,521,698      instructions              #    0.71  insn per cycle         
+    93,969,101,858      branches                  #  355.979 M/sec                  
+     6,385,080,466      branch-misses             #    6.79% of all branches        
+
+      66.089162358 seconds time elapsed
+
+     262.772957000 seconds user
+       1.216036000 seconds sys
+
+
+
+
+l2
+
+ Performance counter stats for 'python search_index.py':
+
+          3,212.61 msec task-clock                #    2.028 CPUs utilized          
+            24,442      context-switches          #    0.008 M/sec                  
+                31      cpu-migrations            #    0.010 K/sec                  
+           125,912      page-faults               #    0.039 M/sec                  
+    12,596,671,316      cycles                    #    3.921 GHz                    
+     5,813,748,465      instructions              #    0.46  insn per cycle         
+     1,132,115,728      branches                  #  352.397 M/sec                  
+        18,354,167      branch-misses             #    1.62% of all branches        
+
+       1.584394727 seconds time elapsed
+
+       2.147535000 seconds user
+       1.067171000 seconds sys
+
+
+
+cosine
+
+ Performance counter stats for 'python search_index.py':
+
+          3,089.59 msec task-clock                #    1.957 CPUs utilized          
+               303      context-switches          #    0.098 K/sec                  
+                 6      cpu-migrations            #    0.002 K/sec                  
+           125,914      page-faults               #    0.041 M/sec                  
+    11,992,255,438      cycles                    #    3.882 GHz                    
+     5,673,799,795      instructions              #    0.47  insn per cycle         
+     1,119,325,823      branches                  #  362.290 M/sec                  
+        18,255,591      branch-misses             #    1.63% of all branches        
+
+       1.578830757 seconds time elapsed
+
+       1.884373000 seconds user
+       1.210101000 seconds sys
+
+
+########## num_elements = train_data length, ef_construction = 200, M = 16 
+
+Saving index to 'train_index.bin'
+
+ Performance counter stats for 'python build_index.py':
+
+        341,816.84 msec task-clock                #    3.993 CPUs utilized          
+             7,025      context-switches          #    0.021 K/sec                  
+                 8      cpu-migrations            #    0.000 K/sec                  
+           124,596      page-faults               #    0.365 K/sec                  
+ 1,364,524,567,264      cycles                    #    3.992 GHz                    
+   974,285,703,193      instructions              #    0.71  insn per cycle         
+   121,248,895,688      branches                  #  354.719 M/sec                  
+     8,613,223,046      branch-misses             #    7.10% of all branches        
+
+      85.600891547 seconds time elapsed
+
+     340.394856000 seconds user
+       1.435855000 seconds sys
+
+
+
+l2
+
+ Performance counter stats for 'python search_index.py':
+
+          3,302.93 msec task-clock                #    2.099 CPUs utilized          
+               350      context-switches          #    0.106 K/sec                  
+                17      cpu-migrations            #    0.005 K/sec                  
+           125,918      page-faults               #    0.038 M/sec                  
+    12,955,068,914      cycles                    #    3.922 GHz                    
+     5,787,316,585      instructions              #    0.45  insn per cycle         
+     1,124,561,427      branches                  #  340.474 M/sec                  
+        18,050,706      branch-misses             #    1.61% of all branches        
+
+       1.573942331 seconds time elapsed
+
+       2.127080000 seconds user
+       1.182429000 seconds sys
+
+
+
+cosine
+
+ Performance counter stats for 'python search_index.py':
+
+          3,114.34 msec task-clock                #    1.940 CPUs utilized          
+               462      context-switches          #    0.148 K/sec                  
+                 3      cpu-migrations            #    0.001 K/sec                  
+           125,922      page-faults               #    0.040 M/sec                  
+    11,984,289,272      cycles                    #    3.848 GHz                    
+     5,666,755,526      instructions              #    0.47  insn per cycle         
+     1,118,006,350      branches                  #  358.987 M/sec                  
+        18,185,447      branch-misses             #    1.63% of all branches        
+
+       1.605279425 seconds time elapsed
+
+       1.900950000 seconds user
+       1.218127000 seconds sys
+
+
+
+########## num_elements = train_data length, ef_construction = 300, M = 16 
+
+Saving index to 'train_index.bin'
+
+ Performance counter stats for 'python build_index.py':
+
+        501,665.02 msec task-clock                #    3.996 CPUs utilized          
+             5,243      context-switches          #    0.010 K/sec                  
+                 8      cpu-migrations            #    0.000 K/sec                  
+           123,924      page-faults               #    0.247 K/sec                  
+ 1,982,240,989,928      cycles                    #    3.951 GHz                    
+ 1,405,742,461,697      instructions              #    0.71  insn per cycle         
+   175,398,836,107      branches                  #  349.633 M/sec                  
+    13,079,190,887      branch-misses             #    7.46% of all branches        
+
+     125.526557732 seconds time elapsed
+
+     500.332902000 seconds user
+       1.353300000 seconds sys
+
+
+l2
+
+ Performance counter stats for 'python search_index.py':
+
+          3,350.46 msec task-clock                #    2.083 CPUs utilized          
+               560      context-switches          #    0.167 K/sec                  
+                 8      cpu-migrations            #    0.002 K/sec                  
+           125,907      page-faults               #    0.038 M/sec                  
+    12,892,412,040      cycles                    #    3.848 GHz                    
+     5,758,665,781      instructions              #    0.45  insn per cycle         
+     1,118,024,502      branches                  #  333.693 M/sec                  
+        17,937,402      branch-misses             #    1.60% of all branches        
+
+       1.608682785 seconds time elapsed
+
+       2.242755000 seconds user
+       1.110757000 seconds sys
+
+
+cosine
+
+
+ Performance counter stats for 'python search_index.py':
+
+          3,096.87 msec task-clock                #    1.964 CPUs utilized          
+               386      context-switches          #    0.125 K/sec                  
+                 6      cpu-migrations            #    0.002 K/sec                  
+           125,919      page-faults               #    0.041 M/sec                  
+    12,032,724,573      cycles                    #    3.885 GHz                    
+     5,683,648,687      instructions              #    0.47  insn per cycle         
+     1,120,790,151      branches                  #  361.911 M/sec                  
+        18,184,913      branch-misses             #    1.62% of all branches        
+
+       1.577055252 seconds time elapsed
+
+       1.922115000 seconds user
+       1.179007000 seconds sys
+

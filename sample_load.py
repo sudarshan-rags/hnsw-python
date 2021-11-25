@@ -14,11 +14,8 @@ if __name__ == "__main__":
 	neighbors = np.array(f.get('neighbors'))
 	distances = np.array(f.get('distances'))
 
-	p = hnswlib.Index(space='cosine', dim=dim)
-	#p = hnswlib.Index(space='l2', dim=dim)
+	p = hnswlib.Index(space='l2', dim=dim)
 
 	num_elements = train.shape[0]
 
 	p.load_index("train_index.bin", max_elements = num_elements)
-
-	labels, distances = p.knn_query(test, k=10)
